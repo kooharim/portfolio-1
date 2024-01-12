@@ -103,8 +103,8 @@ nav a {
 /* 카드 */
 
 .cards .box-img {
-  width: 200px;
-  height: 300px;
+  width: 400px;
+  height: 500px;
   margin: auto;
   background: gainsboro;
   cursor: pointer;
@@ -122,7 +122,7 @@ nav a {
 }
 
 .translateX:hover .fills {
-  transform: translateX(-100%);
+  transform: translateX(-200%);
 }
 
 /* footer */
@@ -175,6 +175,7 @@ nav a {
 
 .slideshow-container {
   display: flex;
+  justify-content: center;
   justify-content: center;
   position: relative;
   margin: auto;
