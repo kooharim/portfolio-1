@@ -67,7 +67,7 @@ nav a {
 
 .hero-in {
   position: absolute;
-  bottom: 250px;
+  bottom: 40px;
   left: 40px;
 }
 .in {
@@ -103,20 +103,36 @@ nav a {
 }
 
 /* 카드 */
-
+.main-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fills img {
+  width: 250px;
+  height: 350px;
+}
 .cards .box-img {
-  width: 200px;
-  height: 300px;
+  width: 250px;
+  height: 350px;
   margin: auto;
-  background: gainsboro;
+  background: rgb(37, 36, 36);
   cursor: pointer;
   font-size: 13px;
   padding: 10px;
   position: relative;
 }
+.box-img P {
+  color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 70px;
+  padding: 30px;
+}
 .cards .box-img .fills {
-  width: 200px;
-  height: 300px;
+  width: 250px;
+  height: 350px;
   position: absolute;
   top: 0;
   left: 0;
@@ -163,7 +179,7 @@ nav a {
 .slideshow-image {
   border-radius: 3%;
   width: 100%;
-  height: 100%;
+  height: 80%;
   overflow: hidden;
 }
 .mySlides {
