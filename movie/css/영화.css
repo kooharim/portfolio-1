@@ -114,11 +114,16 @@ nav a {
   width: 250px;
   height: 350px;
   margin: auto;
-  background: gainsboro;
+  background: rgb(46, 44, 44);
   cursor: pointer;
   font-size: 13px;
   padding: 10px;
   position: relative;
+}
+
+.box-img P {
+  color: lightcyan;
+  padding: 20px;
 }
 .cards .box-img .fills {
   width: 200px;

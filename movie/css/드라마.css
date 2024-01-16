@@ -116,19 +116,17 @@ nav a {
   width: 250px;
   height: 350px;
   margin: auto;
-  background: rgb(37, 36, 36);
+  background: rgb(46, 44, 44);
   cursor: pointer;
   font-size: 13px;
   padding: 10px;
   position: relative;
 }
 .box-img P {
-  color: #ffffff;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 70px;
+  color: lightcyan;
   padding: 30px;
+  position: absolute;
+  top: 60px;
 }
 .cards .box-img .fills {
   width: 250px;
