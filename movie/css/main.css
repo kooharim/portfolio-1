@@ -3,6 +3,8 @@
 }
 body,
 html {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -63,7 +65,7 @@ nav a {
 
 .hero-in {
   position: absolute;
-  bottom: 350px;
+  bottom: 250px;
   left: 40px;
 }
 .in {
@@ -639,13 +641,17 @@ nav a {
   position: relative;
 }
 .icon {
+  position: absolute;
+ left: -6%;
+}
+.icon-in {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   position: absolute;
   top: 100px;
-  left: 680px;
+  left: 800px;
 }
 .texts {
   display: flex;
