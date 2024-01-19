@@ -106,7 +106,8 @@ nav a {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  user-select: none;
+  user-select: none;    
+  /* 드레그 안되게함      */
 }
 
 .carousel_wrapper {
