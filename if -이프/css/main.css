@@ -57,16 +57,20 @@ body {
 .front-left {
   width: 50%;
   height: 100%;
+  margin-top: 100px;
+  margin-left: 150px;
 }
 .front-right {
   width: 50%;
   height: 100%;
 }
-/* .front-right {
+.front-right {
   display: grid;
   grid-template-rows: 200px 200px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-} */
+  margin-top: 100px;
+  margin-right: 130px;
+}
 .main-img img {
   width: 200px;
   height: 200px;
