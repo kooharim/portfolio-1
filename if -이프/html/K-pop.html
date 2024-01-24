@@ -39,6 +39,11 @@
 
       <div class="gallery-controls"></div>
     </div>
+    <main>
+      <div>
+        
+      </div>
+    </main>
   </body>
   <script>
     const galleryContainer = document.querySelector(".gallery-container");
@@ -63,7 +68,7 @@
         });
 
         this.carouselArray.slice(0, 5).forEach((el, i) => {
-          el.classList.add(`gallery-item-${i+1}`);
+          el.classList.add(`gallery-item-${i + 1}`);
         });
       }
       setCurrentState(direction) {

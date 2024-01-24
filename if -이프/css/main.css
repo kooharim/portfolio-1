@@ -75,7 +75,13 @@ body {
   width: 200px;
   height: 200px;
 }
-
+.start-btn {
+  background-color: #41b8d2;
+  border-radius: 30px;
+  padding: 10px;
+  margin-left: 250px;
+  margin-top: 200px;
+}
 /* ease-in-out */
 
 .main-img {
