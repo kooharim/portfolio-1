@@ -167,7 +167,11 @@
           </tbody>
         </table>
       </div>
-      <div class="right"></div>
+      <div class="right">
+        
+           
+          </div>
+      </div>
     </main>
     <footer>
       <div class=""></div>
@@ -233,4 +237,12 @@
   );
   exampleCarousel.setControls();
   exampleCarousel.useControls();
+
+  // 신곡 캐러셀
+  $("#slider").slick({
+            autoplay:true,
+            autoplayspeed:1000,
+          
+            slidesToScroll:2,
+          });
 </script>
