@@ -100,6 +100,7 @@ nav a {
   align-items: center;
   gap: 20px;
   cursor: pointer;
+  margin-left: 50px;
 }
 
 /* 카드 */
