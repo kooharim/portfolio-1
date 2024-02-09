@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>초간단 슬라이더</title>
+  </head>
+  <style>
+    .slider {
+      width: 240px; /* 슬라이더의 너비 */
+      height: 300px; /* 슬라이더의 높이 */
+      overflow: hidden; /* 이미지가 박스 바깥으로 나가지 않도록 함 */
+      position: relative; /* 슬라이드 위치 조정을 위함 */
+    }
+
+    .slides {
+      width: 100%; /* 부모 요소와 동일한 너비 */
+      height: 100%; /* 부모 요소와 동일한 높이 */
+      display: flex; /* 이미지를 가로로 나열 */
+      transition: transform 0.5s ease-in-out; /* 부드러운 전환 효과 */
+    }
+
+    .slides img {
+      width: 100%; /* 슬라이더 너비에 맞게 조정 */
+      height: 300px; /* 슬라이더 높이에 맞게 조정 */
+      object-fit: cover; /* 이미지가 박스에 꽉 차도록 조정하되, 비율 유지 */
+    }
+  </style>
+  <body>
+    <div class="slider">
+      <div class="slides">
+        <img
+          src="https://www.mhnse.com/news/photo/202310/226166_234755_1442.jpg"
+          alt="Image 1"
+        />
+        <img
+          src="https://cdn.newsculture.press/news/photo/202302/517312_635335_819.jpg"
+          alt="Image 2"
+        />
+        <img
+          src="https://image.newsis.com/2021/05/18/NISI20210518_0000749326_web.jpg"
+          alt="Image 3"
+        />
+        <!-- 추가 이미지 -->
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const slider = document.querySelector(".slides");
+      let currentIndex = 0;
+      const slideCount = slider.children.length;
+      const slideWidth = 240; // 슬라이더의 너비를 맞춰주세요.
+      const slideInterval = 3000; // 3초 간격으로 설정
+
+      setInterval(function () {
+        currentIndex = (currentIndex + 1) % slideCount;
+        slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }, slideInterval);
+    });
+  </script>
+</html>
