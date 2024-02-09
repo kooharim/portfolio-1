@@ -8,8 +8,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("../img/배경/영화\ 배경.jpg") no-repeat center;
-  background-color: black;
+  background: url("../img/IF\ 로그인.avif") no-repeat center;
+  background-color: #6ec9dc;
 }
 body::before {
   content: "";
@@ -45,7 +45,7 @@ body::before {
   padding: 20px 10px 10px;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #fff;
   font-size: 18px;
   color: #fff;
   outline: none;
@@ -55,14 +55,14 @@ body::before {
   left: 10px;
   top: 15px;
   font-size: 18px;
-  color: #999;
+  color: #fff;
   transition: top 0.5s ease;
 }
 .int-area input:focus + label,
 .int-area input:visited + label {
   top: -2px;
   font-size: 13px;
-  color:lightseagreen;
+  color: blue;
 }
 .btn-area {
   margin-top: 30px;
@@ -72,7 +72,7 @@ body::before {
   height: 50px;
   background: lightseagreen;
   color: #fff;
-  opacity: 0.5;
+  opacity: 0.7;
   font-size: 20px;
   border: none;
   border-radius: 25px;
