@@ -62,7 +62,7 @@ body::before {
 .int-area input:visited + label {
   top: -2px;
   font-size: 13px;
-  color:lightseagreen;
+  color: lightseagreen;
 }
 .btn-area {
   margin-top: 30px;
@@ -76,4 +76,15 @@ body::before {
   font-size: 20px;
   border: none;
   border-radius: 25px;
+}
+.before-btn {
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color:lightskyblue;
+}
+.before {
+  text-decoration: none;
+  color: black;
 }
