@@ -39,7 +39,29 @@
           <a href="../html/proflie.html">프로필 °</a>
           <a href="../html/로그아웃.html">로그이웃</a>
         </div>
+         <!-- 모바일버전 -->
+<div class="navbar_overlay"></div>
+
+<div class="navbar_burger">
+  <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-list" viewBox="0 0 50 50" width="48" height="48"><path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"/></svg>
+  <!-- 화이트 -->
+ 
+</div>
+
+<div class="navbar_menu">
+  <a href="#">ABOUT</a>
+  <a href="#">WORKS</a>
+  <a href="#">NEWS</a>
+  <a href="#">CONTACT</a>
+  <div class="navbar_burger_back">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+      <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+    </svg>
+  </div>
+</div>
       </nav>
+     
+
       <header>
         <section class="hero">
           <!-- 자동 슬라이드 시작 -->
@@ -418,5 +440,49 @@
 
       setTimeout(showSlides, 1000); // 2초마다 이미지가 체인지됩니다
     }
+
+    // 햄버거 js
+    let darkBackground = document.querySelector(".dark-background");
+  let navbar = document.querySelector(".navbar_main");
+
+  function handleNavbarScroll1() {
+    let windowHeight = window.innerHeight;
+    let scrollPosition = window.scrollY;
+
+    let darkBackgroundHeight = darkBackground.offsetHeight;
+    let darkBackgroundTop = darkBackground.offsetTop;
+
+    let triggerPosition1 = darkBackgroundTop + (darkBackgroundHeight * 0.9);
+
+    if (scrollPosition >= triggerPosition1) {
+      navbar.classList.add("navbar_scroll");
+    } else {
+      navbar.classList.remove("navbar_scroll");
+    }
+  }
+
+  window.addEventListener("scroll", handleNavbarScroll1);
+  window.addEventListener("resize", handleNavbarScroll1);
+
+  // 버기 버튼
+  const navbarBurger = document.querySelector('.navbar_burger');
+  const navbarburgerback = document.querySelector('.navbar_burger_back');
+  const navbarMenu = document.querySelector('.navbar_menu');
+  const navbarOverlay = document.querySelector('.navbar_overlay');
+
+  navbarBurger.addEventListener('click', () => {
+    navbarMenu.classList.toggle('active');
+    navbarOverlay.classList.toggle('active');
+  });
+
+  navbarburgerback.addEventListener('click', () => {
+    navbarMenu.classList.remove('active');
+    navbarOverlay.classList.remove('active');
+  });
+
+  navbarOverlay.addEventListener('click', () => {
+    navbarMenu.classList.remove('active');
+    navbarOverlay.classList.remove('active');
+  });
   </script>
 </html>

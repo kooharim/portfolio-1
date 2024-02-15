@@ -18,7 +18,9 @@ body {
   align-self: center;
 }
 .login {
-  align-self: center;
+  position: absolute;
+  top: 30px;
+  right: 150px;
   flex-grow: 1;
   text-align: right;
 }
