@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>k-pop</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <link rel="stylesheet" href="../css/k-pop.css" />
   </head>
   <body>
@@ -44,133 +45,56 @@
         <div class="gallery-controls"></div>
       </div>
     </head>
-    <main class="main">
+   <main class="main">
       <div class="left">
-        <table border="1" width="70%" height="100" cellspacing="7">
-          <caption>
-            2024년-1월 K-pop 인기순위
-          </caption>
-          <thead>
-            <tr align="center" bgcolor="white">
-              <td>순위</td>
-              <th>앨범 사진</th>
-              <th>곡 이름</th>
-              <th>가수</th>
-            </tr>
-          </thead>
+       <div class="list">
+        <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+       </ul>
+       </div>
+     </div>
 
-          <tbody>
-            <tr align="center" bgcolor="white">
-              <th>1</th>
-              <td>
-                <img
-                  src="../img/K-pop/아이유 Love wins all .jpg"
-                  width="50px"
-                  height="50px"
-                />
-              </td>
-              <td>Love wins all</td>
-              <td>아이유</td>
-            </tr>
-            <tr align="center" bgcolor="white">
-              <th>2</th>
-              <td>
-                <img src="../img/K-pop/태연.jpg" width="50px" height="50px" />
-              </td>
-              <td>TO.X</td>
-              <td>태연</td>
-            </tr>
-            <tr align="center" bgcolor="white">
-              <th>3</th>
-              <td>
-                <img
-                  src="../img/K-pop/사랑은 늘 도망가.jpg"
-                  width="50px"
-                  height="50px"
-                />
-              </td>
-              <td>사랑은 늘 도방가</td>
-              <td>임영웅</td>
-            </tr>
-            <tr align="center" bgcolor="white">
-              <th>4</th>
-              <td>
-                <img src="../img/K-pop/에스파.jpg" width="50px" height="50px" />
-              </td>
-              <td>Drama</td>
-              <td>에스파</td>
-            </tr>
-            <tr align="center" bgcolor="white">
-              <th>5</th>
-              <td>
-                <img
-                  src="../img/K-pop/헤어지자 말해요.jpg"
-                  width="50px"
-                  height="50px"
-                />
-              </td>
-              <td>헤어지자 말해요</td>
-              <td>박재정</td>
-            </tr>
-            <tr align="center" bgcolor="white">
-              <th>6</th>
-              <td>
-                <img src="../img/K-pop/제니.webp" width="50px" height="50px" />
-              </td>
-              <td>you & me</td>
-              <td>제니</td>
-            </tr>
-            <tr align="center" bgcolor="white">
-              <th>7</th>
-              <td>
-                <img
-                  src="../img/K-pop/비비지 매니악.jpg"
-                  width="50px"
-                  height="50px"
-                />
-              </td>
-              <td>Maniac</td>
-              <td>비비지</td>
-            </tr>
-            <tr align="center" bgcolor="white">
-              <th>8</th>
-              <td>
-                <img
-                  src="../img/K-pop/여자 아이들.jpg"
-                  width="50px"
-                  height="50px"
-                />
-              </td>
-              <td>wife</td>
-              <td>(여자)아이들</td>
-            </tr>
-            <tr align="center" bgcolor="white">
-              <th>9</th>
-              <td>
-                <img src="../img/K-pop/엔믹스.jpg" width="50px" height="50px" />
-              </td>
-              <td>Dash</td>
-              <td>엔믹스</td>
-            </tr>
-            <tr align="center" bgcolor="white">
-              <th>10</th>
-              <td>
-                <img
-                  src="../img/K-pop/후라이의 꿈.webp"
-                  width="50px"
-                  height="50px"
-                />
-              </td>
-              <td>후라이의 꿈</td>
-              <td>이수현</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
       <div class="right">
-        
+        <P>신곡</P>
+        <div id="sliderWrap">
+          <ul class="slider">
+            <li>
+              <div class="itemWrap"><img src="../img/K-pop/홀씨 - 아이유.jpeg" width="100%" height="100%"></div>
+            </li>
+            <li>
+              <div class="itemWrap"><img src="../img/K-pop/super lady - 여자 아이들.jpeg" width="60%" height="80%"></div>
+            </li>
+            <li>
+              <div class="itemWrap"></div>
+            </li>
+            <li>
+              <div class="itemWrap"></div>
+            </li>
+            <li>
+              <div class="itemWrap"></div>
+            </li>
            
+          </ul>
+          <div id="btn" class="directionNav">
+            <button id="prev" class="btn">prev</button>
+            <button id="next" class="btn">next</button>
           </div>
+          <ul class="dot">
+            <li class="dots on">btn01</li>
+            <li class="dots">btn02</li>
+            <li class="dots">btn03</li>
+            <li class="dots">btn04</li>
+            <li class="dots">btn05</li>
+          </ul>
       </div>
     </main>
     <footer>
@@ -238,11 +162,93 @@
   exampleCarousel.setControls();
   exampleCarousel.useControls();
 
-  // 신곡 캐러셀
-  $("#slider").slick({
-            autoplay:true,
-            autoplayspeed:1000,
-          
-            slidesToScroll:2,
-          });
+  // 신곡 자동 캐러셀
+  function initializeSlider() {
+  const slideWrapper = document.getElementById('sliderWrap');
+  const slider = document.querySelector('#sliderWrap .slider');
+  const slides = document.querySelectorAll('#sliderWrap .slider li');
+  const sliderWidth = slideWrapper.clientWidth;
+  const totalSlides = slides.length;
+  
+  let slideIndex = 0;
+  let autoSlider;
+
+  // Set slide widths
+  slides.forEach(function (element) {
+    element.style.width = sliderWidth + 'px';
+  });
+
+  slider.style.width = sliderWidth * totalSlides + 'px';
+
+  // Next, Prev, Pagination
+  const nextBtn = document.getElementById('next');
+  const prevBtn = document.getElementById('prev');
+  const dot = document.querySelector('.dot');
+  const allBtn = document.getElementById('btn');
+
+  function plusSlides(n) {
+    showSlides(slideIndex + n);
+  }
+
+  function showSlides(n) {
+    slideIndex = (n + totalSlides) % totalSlides;
+    slider.style.left = -(sliderWidth * slideIndex) + 'px';
+    pagination();
+  }
+
+  function currentSlides(n) {
+    showSlides(n);
+  }
+
+  function pagination() {
+    const dots = document.querySelectorAll('.dot li');
+    dots.forEach(function (element) {
+      element.classList.remove('on');
+    });
+    dots[slideIndex].classList.add('on');
+  }
+
+  // Handle dot clicks
+  dot.addEventListener('click', function (event) {
+    if (event.target.tagName === 'LI') {
+      showSlides(Array.from(event.target.parentNode.children).indexOf(event.target));
+    }
+  });
+
+  // Handle button clicks
+  nextBtn.addEventListener('click', function () {
+    plusSlides(1);
+  });
+
+  prevBtn.addEventListener('click', function () {
+    plusSlides(-1);
+  });
+
+  // Handle hover
+  const hoverElements = [allBtn, dot];
+
+  hoverElements.forEach(function (element) {
+    element.addEventListener('mouseover', function () {
+      this.classList.add('active');
+      clearInterval(autoSlider);
+    });
+
+    element.addEventListener('mouseleave', function () {
+      this.classList.remove('active');
+      startAutoSlider();
+    });
+  });
+
+  // Auto slider
+  function startAutoSlider() {
+    autoSlider = setInterval(function () {
+      plusSlides(1);
+    }, 3000);
+  }
+
+  // Initialize auto slider
+  startAutoSlider();
+}
+// 호출하여 슬라이더 초기화
+initializeSlider();
 </script>
