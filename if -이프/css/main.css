@@ -2,7 +2,7 @@
 
 html,
 body {
-  background-image: linear-gradient(to bottom, #41b8d2, #ffffff);
+  background-image: linear-gradient(to bottom,lightseagreen, #ffffff);
   padding: 0;
   margin: 0;
   width: 100%;
@@ -40,8 +40,10 @@ body {
 /* 메인 img */
 
 .front-left .icon {
-  width: 250px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 30PX;
+  margin-left: 20PX;
 }
 .front-left p {
   font-family: "LOTTERIACHAB";
@@ -57,7 +59,7 @@ body {
 .front-left {
   width: 50%;
   height: 100%;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-left: 150px;
 }
 .front-right {
@@ -75,13 +77,8 @@ body {
   width: 200px;
   height: 200px;
 }
-.start-btn {
-  background-color: #41b8d2;
-  border-radius: 30px;
-  padding: 10px;
-  margin-left: 250px;
-  margin-top: 200px;
-}
+
+
 /* ease-in-out */
 
 .main-img {
