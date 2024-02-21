@@ -5,7 +5,6 @@ body {
   align-items: center;
   background: linear-gradient(180deg,#E6516B, #DAA1A4);
 }
-
 /* offcanvas-header */
 .offcanvas-header {
   position: relative;
@@ -37,6 +36,7 @@ span {
   margin: 0 auto;
   max-width: 1000px;
   position: relative;
+  margin-top: 100px;
 }
 .gallery-item {
   height: 200px;
@@ -86,6 +86,7 @@ span {
   display: flex;
   justify-content: center;
   margin: 25px 0;
+  margin-top: 20px;
   height: 100px;
 }
 .gallery-controls button {
