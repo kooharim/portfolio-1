@@ -3,8 +3,27 @@ body {
   padding: 0;
   width: 100%;
   align-items: center;
-  background: linear-gradient(190deg, rgb(236, 213, 232), rgb(50, 112, 118));
+  background: linear-gradient(180deg,#E6516B, #DAA1A4);
 }
+
+/* offcanvas-header */
+.offcanvas-header {
+  position: relative;
+}
+.offcanvas-btn-lo {
+  position: absolute;
+  left: 180px;
+}
+.offcanvas-btn {
+  position: absolute;
+  left: 250px;
+}
+/* search */
+.search input {
+  border-radius: 20px;
+  width: 700px;
+}
+
 span {
   font-size: 30px;
   margin-left: 100px;
@@ -149,66 +168,179 @@ span {
 .left {
   width: 50%;
   height: 100%;
-  
 }
 .right {
   width: 50%;
   height: 100%;
-  justify-content: center;
-  align-items: center;
-  
+  position: relative;
+}
+
+.right h2 {
+  margin-left: 300px;
+  margin-top: 70px;
+  font-size: 30px;
+  font-weight: 800;
 }
 /* 신곡 캐러셀 */
-   /* reset */
-   li { list-style: none; }
-   button { border: none; }
-   div, ul, li, button { margin: 0; padding: 0; }
-   
-   #sliderWrap { position: relative; width: 300px; height: 300px; overflow: hidden; }
-   
-   /* slide item */
-   #sliderWrap .slider { position: absolute; top: 0; left: 0; height: 100%;}
-   #sliderWrap .slider li { float: left; position: relative; top: 0; left: 0; height: 100%; }
-   #sliderWrap .slider li .itemWrap { width: 100%; height: 100%; text-align: center; }
-   
-   /* item background color */
-   #sliderWrap .slider li:nth-child(1) .itemWrap { background-color: #ff8181; }
-   #sliderWrap .slider li:nth-child(2) .itemWrap { background-color: #fff281; }
-   #sliderWrap .slider li:nth-child(3) .itemWrap { background-color: #81d1ff; }
-   #sliderWrap .slider li:nth-child(4) .itemWrap { background-color:lightgreen; }
-   #sliderWrap .slider li:nth-child(5) .itemWrap { background-color:lightsalmon; }
-  
-   
-   /* button */
-   #sliderWrap .directionNav { position: relative; width: 100%; height: 100%; }
-   #sliderWrap .directionNav button { position: absolute; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; font-size: 0; background: none; cursor: pointer; }
-   #sliderWrap .directionNav button::after { display: block; content: ""; width: 100%; height: 100%; border-right: 3px solid #000; border-top: 3px solid #000; transform: rotate(45deg); opacity: 0.6; }
-   #sliderWrap .directionNav button#prev { left: 20px; }
-   #sliderWrap .directionNav button#prev::after { transform: rotate(-135deg); }
-   #sliderWrap .directionNav button#next { right: 20px; } 
-   
-   /* pagination */
-   .dot { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); }
-   .dot li { float: left; width: 20px; height: 5px; margin: 0 4px; border-radius: 50px; background: #000; opacity: 0.3; text-indent: -9999px; cursor: pointer; }
-   .dot li.on { opacity: 1; }
+/* reset */
+li {
+  list-style: none;
+}
+button {
+  border: none;
+}
+div,
+ul,
+li,
+button {
+  margin: 0;
+  padding: 0;
+}
 
-  /* 느낌별 스테이션 */
-  .section-title {
-    font-weight: 700;
-    font-size: 32px;
-    margin: 40px 0;
-  }
+#sliderWrap {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin-left: 300px;
+  margin-top: 60px;
+}
 
-  .stations {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 1fr 1fr 1fr */
-    justify-content: center;
-    gap: 40px;
-  }
-  section {
-    max-width: 1120px;
-    width: 100%;
-    margin: 80px auto;
-    padding: 0 36px;
-  }
+/* slide item */
+#sliderWrap .slider {
+  position: absolute;
+
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#sliderWrap .slider li {
+  float: left;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+#sliderWrap .slider li .itemWrap {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/* item background color */
+#sliderWrap .slider li:nth-child(1) .itemWrap {
+  background-color: #ff8181;
+}
+#sliderWrap .slider li:nth-child(2) .itemWrap {
+  background-color: #fff281;
+}
+#sliderWrap .slider li:nth-child(3) .itemWrap {
+  background-color: #81d1ff;
+}
+#sliderWrap .slider li:nth-child(4) .itemWrap {
+  background-color: lightgreen;
+}
+#sliderWrap .slider li:nth-child(5) .itemWrap {
+  background-color: lightsalmon;
+}
+
+/* button */
+#sliderWrap .directionNav {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#sliderWrap .directionNav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  background: none;
+  cursor: pointer;
+}
+#sliderWrap .directionNav button::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-right: 3px solid #000;
+  border-top: 3px solid #000;
+  transform: rotate(45deg);
+  opacity: 0.6;
+}
+#sliderWrap .directionNav button#prev {
+  left: 20px;
+}
+#sliderWrap .directionNav button#prev::after {
+  transform: rotate(-135deg);
+}
+#sliderWrap .directionNav button#next {
+  right: 20px;
+}
+
+/* pagination */
+.dot {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dot li {
+  float: left;
+  width: 20px;
+  height: 5px;
+  margin: 0 4px;
+  border-radius: 50px;
+  background: #000;
+  opacity: 0.3;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.dot li.on {
+  opacity: 1;
+}
+
+/* 느낌별 스테이션 */
+.section-title {
+  font-weight: 700;
+  font-size: 32px;
+  margin: 40px 0;
+  margin-left: 80PX;
+}
+
+.stations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 1fr 1fr 1fr */
+  justify-content: center;
+  gap: 30px;
+  margin-left: 80PX;
+}
+section {
+  max-width: 1120px;
+  width: 100%;
+  margin: 80px auto;
+  padding: 0 36px;
+}
+section img {
+  border-radius: 50%;
+}
+
+/* 음악재생 */
+.music {
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 20px;
+ 
+}
+.music img {
+  border-radius: 20px;
+}
+.music-PLAY {
+  position: absolute;
+  opacity: 0.5;
+  right: 2px;
+  bottom: 10PX;
+}

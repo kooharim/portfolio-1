@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("../img/IF\ 로그인.avif") no-repeat center;
+  background: url("../img/기타/IF\ 로그인.avif") no-repeat center;
   background-color: #6ec9dc;
 }
 body::before {
@@ -76,4 +76,8 @@ body::before {
   font-size: 20px;
   border: none;
   border-radius: 25px;
+}
+.caption a {
+  text-decoration: none;
+  color: white;
 }
