@@ -21,6 +21,14 @@ body::before {
   left: 0;
   /* background-color: rgba(0, 0, 0, 7); */
 }
+
+/* 로고 */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
 .login-form {
   position: relative;
   z-index: 2;

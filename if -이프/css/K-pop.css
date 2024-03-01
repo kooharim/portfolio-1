@@ -131,9 +131,11 @@ span {
   display: inline-block;
   height: 5px;
   padding: 10px;
+  margin-top: 15px;
   position: absolute;
   right: -30px;
-  top: 45;
+  /* top: 45; */
+  
   transform: rotate(-45deg) translateY(-50%);
   transition: right 0.15s ease-in-out;
   width: 5px;
@@ -346,39 +348,3 @@ section {
 
 
 
-/* ease-in-out */
-.stations {
-  margin: 0;
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-.station img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: filter 0.5s ease-in-out;
-}
-
-section p {
-  position: absolute;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  
-  
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: lightseagreen;
-  background-color: rgba(0, 0, 0, 0.7);
-  transition: opacity 0.5s ease-in-out;
-}
-section img:hover img {
-  filter: brightness(50%);
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-}
-
-section :hover p {
-  opacity: 1;
-}
