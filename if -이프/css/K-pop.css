@@ -425,7 +425,7 @@ section {
     background-size: contain;
   }
   .gallery-item-1 {
-    left: 3%;
+    left: 5%;
     opacity: 0.4;
     transform: translateX(-50%);
   }
@@ -433,7 +433,7 @@ section {
   .gallery-item-4 {
     height: 150px;
     opacity: 0.8;
-    width: 188px;
+    width: 150px;
     z-index: 1;
   }
   .gallery-item-2 {
@@ -462,8 +462,9 @@ section {
     display: flex;
     justify-content: center;
     margin: 25px 0;
-    margin-top: 20px;
+    margin-bottom: 20px;
     height: 100px;
+    margin-left: 230px;
   }
   .gallery-controls button {
     background-color: transparent;
