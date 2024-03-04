@@ -29,6 +29,24 @@ span {
   text-decoration: none;
 }
 
+.gallery {
+  position: relative;
+}
+/* k-pop 글씨 */
+h1 {
+  position: absolute;
+  margin-left: 659px;
+  font-family: "LOTTERIACHAB";
+}
+
+@font-face {
+  font-family: "LOTTERIACHAB";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 메인 케러셀 시작 */
 .gallery-container {
   align-items: center;
   display: flex;
@@ -36,7 +54,7 @@ span {
   margin: 0 auto;
   max-width: 1000px;
   position: relative;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 .gallery-item {
   height: 200px;
@@ -230,22 +248,7 @@ button {
   text-align: center;
 }
 
-/* item background color */
-#sliderWrap .slider li:nth-child(1) .itemWrap {
-  background-color: #ff8181;
-}
-#sliderWrap .slider li:nth-child(2) .itemWrap {
-  background-color: #fff281;
-}
-#sliderWrap .slider li:nth-child(3) .itemWrap {
-  background-color: #81d1ff;
-}
-#sliderWrap .slider li:nth-child(4) .itemWrap {
-  background-color: lightgreen;
-}
-#sliderWrap .slider li:nth-child(5) .itemWrap {
-  background-color: lightsalmon;
-}
+
 
 /* button */
 #sliderWrap .directionNav {
@@ -404,12 +407,83 @@ section {
   opacity: 1;
 }
 
+/* footer  */
+.member-footer {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+}
+.member-footer a {
+  color: aliceblue;
+}
+
+.member-footer div a:hover {
+  text-decoration: underline;
+  color: lightseagreen;
+}
+
+.member-footer div a:after {
+  content: "|";
+  font-size: 10px;
+  color: aliceblue;
+  margin-right: 5px;
+  margin-left: 7px;
+  /*살짝 내려가 있기 때문에 위로 올려주기 위해 transform 사용하기*/
+  display: inline-block;
+  transform: translateY(-1px);
+}
+
+.member-footer div a:last-child:after {
+  display: none;
+}
+
 /* 뷰 포인트가 480px 이하일 때 */
 @media (max-width: 480px) {
+
+/* offcanvas-header  nav바 */
+.offcanvas-header {
+  position: relative;
+}
+.offcanvas-btn-lo {
+  position: absolute;
+  left: 180px;
+}
+.offcanvas-btn {
+  position: absolute;
+  left: 250px;
+}
+/* search */
+.search input {
+  border-radius: 20px;
+  width: 300px;
+}
+
+span {
+  font-size: 30px;
+  margin-left: -15px;
+  text-decoration: none;
+}
+
+
+  /* k-pop 글씨 */
+  h1 {
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 20px;
+    font-family: "LOTTERIACHAB";
+  }
+
+  @font-face {
+    font-family: "LOTTERIACHAB";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2")
+      format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
   .gallery-container {
     align-items: center;
     display: flex;
-    height: 400px;
+    height: 300px;
     margin: 0 auto;
     max-width: 500px;
     position: relative;
@@ -417,7 +491,7 @@ section {
     margin-left: 260px;
   }
   .gallery-item {
-    height: 200px;
+    height: 100px;
     opacity: 0;
     position: absolute;
     transition: all 0.3s ease-in-out;
@@ -427,15 +501,15 @@ section {
     background-size: contain;
   }
   .gallery-item-1 {
-    left: 5%;
+    left: 2%;
     opacity: 0.4;
     transform: translateX(-50%);
   }
   .gallery-item-2,
   .gallery-item-4 {
-    height: 150px;
+    height: 120px;
     opacity: 0.8;
-    width: 150px;
+    width: 200px;
     z-index: 1;
   }
   .gallery-item-2 {
@@ -444,11 +518,11 @@ section {
   }
   .gallery-item-3 {
     box-shadow: -2px 5px 33px 6px rgb(0, 0, 0, 0.35);
-    height: 200px;
+    height: 140px;
     opacity: 1;
     left: 50%;
     transform: translateX(-50%);
-    width: 230px;
+    width: 200px;
     z-index: 2;
   }
   .gallery-item-4 {
@@ -472,7 +546,7 @@ section {
     background-color: transparent;
     border: 0;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 20px;
     margin: 0 50px;
     padding: 0 12px;
     text-transform: capitalize;
@@ -510,7 +584,7 @@ section {
     display: inline-block;
     height: 5px;
     padding: 10px;
-    margin-top: 15px;
+    margin-top: 10px;
     position: absolute;
     right: -30px;
     /* top: 45; */
@@ -542,36 +616,210 @@ section {
   .gallery-header li.gallery-item-selcted {
     background: #555;
   }
+  /* 신곡 */
+  /* 신곡 캐러셀 */
+/* reset */
+li {
+  list-style: none;
+}
+button {
+  border: none;
+}
+div,
+ul,
+li,
+button {
+  margin: 0;
+  padding: 0;
 }
 
-/* footer  */
-.member-footer {
+#sliderWrap {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin-left:-10px;
+  margin-top: 10px;
+}
+
+/* slide item */
+#sliderWrap .slider {
+  position: absolute;
+
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#sliderWrap .slider li {
+  float: left;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+#sliderWrap .slider li .itemWrap {
+  width: 100%;
+  height: 100%;
   text-align: center;
-  font-size: 12px;
+}
+
+
+
+/* button */
+#sliderWrap .directionNav {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#sliderWrap .directionNav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 40px;
+  font-size: 0;
+  background: none;
+  cursor: pointer;
+}
+#sliderWrap .directionNav button::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-right: 3px solid #000;
+  border-top: 3px solid #000;
+  transform: rotate(45deg);
+  opacity: 0.6;
+}
+#sliderWrap .directionNav button#prev {
+  left: 20px;
+}
+#sliderWrap .directionNav button#prev::after {
+  transform: rotate(-135deg);
+}
+#sliderWrap .directionNav button#next {
+  right: 20px;
+}
+
+/* pagination */
+.dot {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dot li {
+  float: left;
+  width: 20px;
+  height: 5px;
+  margin: 0 4px;
+  border-radius: 50px;
+  background: #000;
+  opacity: 0.3;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.dot li.on {
+  opacity: 1;
+}
+/* 음악재생 */
+.music {
+  position: absolute;
+  margin-left: -10px;
   margin-top: 20px;
-  
 }
-.member-footer  a {
-  color: aliceblue;
+.music h4 {
+  margin-left: 10px;
 }
-
-.member-footer div a:hover{
-  text-decoration: underline;
-  color:lightseagreen
+.music img {
+  border-radius: 20px;
 }
-
-.member-footer div a:after{
-  content:'|';
-  font-size: 10px;
-  color:aliceblue;
-  margin-right: 5px;
-  margin-left: 7px;
-  /*살짝 내려가 있기 때문에 위로 올려주기 위해 transform 사용하기*/
-  display: inline-block;
-  transform: translateY(-1px);
-
+.music-PLAY {
+  position: absolute;
+  opacity: 0.5;
+  right: 2px;
+  bottom: 10px;
 }
 
-.member-footer div a:last-child:after{
-  display: none;
+/* 느낌별 스테이션 */
+.section-title {
+  font-weight: 700;
+  font-size: 32px;
+  margin: 40px 0;
+  margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 1fr 1fr 1fr */
+  justify-content: center;
+  gap: 30px;
+  margin-left: 200px;
+}
+.stations img {
+  border-radius: 50%;
+}
+
+section {
+  width: 100%;
+  margin: 80px auto;
+  padding: 0 36px;
+  position: relative;
+}
+
+/* .station img {
+  width: 200px;
+  height: 200px;
+} */
+
+/* ease-in-out */
+
+.station {
+  margin: 0;
+  position: relative;
+  width: 100px;
+  height: 100px;
+ 
+}
+
+.stations img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.5s ease-in-out;
+}
+
+.stations p {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: lightseagreen;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.station:hover img {
+  filter: brightness(50%);
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+.station:hover p {
+  opacity: 1;
+}
+
 }
