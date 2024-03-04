@@ -122,3 +122,36 @@ body {
 .main-img:hover p {
   opacity: 1;
 }
+
+
+/* footer  */
+.member-footer {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.member-footer a {
+  color: #ffffff;
+}
+
+.member-footer div a:hover{
+  text-decoration: underline;
+  color:lightseagreen
+}
+
+.member-footer div a:after{
+  content:'|';
+  font-size: 10px;
+  color: cadetblue;
+  margin-right: 5px;
+  margin-left: 7px;
+  /*살짝 내려가 있기 때문에 위로 올려주기 위해 transform 사용하기*/
+  display: inline-block;
+  transform: translateY(-1px);
+
+}
+
+.member-footer div a:last-child:after{
+  display: none;
+}

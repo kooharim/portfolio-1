@@ -176,7 +176,6 @@ span {
   width: 50%;
   height: 100%;
   position: relative;
-  
 }
 
 .right h2 {
@@ -306,11 +305,14 @@ button {
   opacity: 1;
 }
 
-/* 음악재생
+/* 음악재생 */
 .music {
   position: absolute;
-  margin-left: 300px;
+  margin-left: 200px;
   margin-top: 20px;
+}
+.music h4 {
+  margin-left: 50px;
 }
 .music img {
   border-radius: 20px;
@@ -320,7 +322,7 @@ button {
   opacity: 0.5;
   right: 2px;
   bottom: 10px;
-} */
+}
 
 /* 느낌별 스테이션 */
 .section-title {
@@ -361,8 +363,8 @@ section {
 .station {
   margin: 0;
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 }
 
 .stations img {
@@ -403,7 +405,7 @@ section {
 }
 
 /* 뷰 포인트가 480px 이하일 때 */
-@media (max-width:480px) {
+@media (max-width: 480px) {
   .gallery-container {
     align-items: center;
     display: flex;
@@ -412,7 +414,7 @@ section {
     max-width: 500px;
     position: relative;
     margin-top: 200px;
-    margin-left:260px;
+    margin-left: 260px;
   }
   .gallery-item {
     height: 200px;
@@ -512,7 +514,7 @@ section {
     position: absolute;
     right: -30px;
     /* top: 45; */
-  
+
     transform: rotate(-45deg) translateY(-50%);
     transition: right 0.15s ease-in-out;
     width: 5px;
@@ -536,8 +538,40 @@ section {
     margin: 0 16px;
     width: 10px;
   }
-  
+
   .gallery-header li.gallery-item-selcted {
     background: #555;
   }
+}
+
+/* footer  */
+.member-footer {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+  
+}
+.member-footer  a {
+  color: aliceblue;
+}
+
+.member-footer div a:hover{
+  text-decoration: underline;
+  color:lightseagreen
+}
+
+.member-footer div a:after{
+  content:'|';
+  font-size: 10px;
+  color:aliceblue;
+  margin-right: 5px;
+  margin-left: 7px;
+  /*살짝 내려가 있기 때문에 위로 올려주기 위해 transform 사용하기*/
+  display: inline-block;
+  transform: translateY(-1px);
+
+}
+
+.member-footer div a:last-child:after{
+  display: none;
 }
